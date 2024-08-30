@@ -27,7 +27,7 @@ df_mri=pd.read_csv(os.path.join(mridir,'imagingmeasures.tsv'),index_col=['subj']
 # dataframe with demographic and clinical data with each row a different participant and every column a different measure
 #, e.g. age, sex, education, from the same sample
 # this dataframe should also contain the site variable!
-df_clin=pd.read_csv(os.path.join(clindir,'demo_clin_vars.tsv'),index_col=['subj'])
+df_clin=pd.read_csv(os.path.join(clindir,'demo_clin_vars.tsv'),index_col=['subj'],sep='\t')
 
 # optional in case files do not match, filter rows
 #df_mri = df_mri.loc[df_mri.index.isin(df_clin.index)]
