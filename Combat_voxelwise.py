@@ -43,10 +43,10 @@ clindir='/home/anw/cvriend/my-scratch/combattest/clin'
 df_clin=pd.read_csv(os.path.join(clindir,'demo_clin_vars.tsv'),sep='\t',index_col=['subj'])
 covars= pd.DataFrame({'SITE':df_clin['site'].tolist(),
                       'sex':df_clin['sex'].tolist(),
-                      'diagnosis':df_clin['Dx'].tolist(),
+                      'diagnosis':df_clin['diagnosis'].tolist(),
                       'age':df_clin['age'].tolist(),
+                      'TOLrt':df_clin['TOLrt'].tolist(),
                       'edu':df_clin['edu'].tolist()})
-
 # find the nii files
 os.chdir(mridir)
 nii_files = [niifile for niifile in os.listdir(mridir)
